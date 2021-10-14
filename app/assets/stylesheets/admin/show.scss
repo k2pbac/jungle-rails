@@ -1,7 +1,17 @@
 section.admin_dashboard {
   width: 60%;
   margin: auto;
+
+  .product-info {
+    margin-bottom: 15px;
+  }
+
   .well {
-    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-size: 2.2rem;
   }
 }

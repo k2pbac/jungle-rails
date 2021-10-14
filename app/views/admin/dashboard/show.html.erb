@@ -3,12 +3,16 @@
 <section class="admin_dashboard">
   <h1 class="text-center">Admin Dashboard</h1>
 
-  <div class="well text-center row">
-    <div class="product-info col-6">
+  <div class="well text-center">
+    <div class="product-info">
       <p>Product Count: <%= @product_count %></p>
+      <%= link_to 'Products', "/admin/products" %>
     </div>
-    <div class="category-info col-6">
+    <div class="category-info">
       <p>Categories Count: <%= @categories_count %></p>
+      <% for i in 0..@categories_count.to_i-1 do %>
+        <%= link_to @categories[i], "/categories/#{i+1}" %>
+      <% end %>
     </div>
   </div>
 </section>

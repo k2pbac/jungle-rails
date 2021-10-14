@@ -4,5 +4,6 @@ class Admin::DashboardController < ApplicationController
   def show
     @product_count = Product.count
     @categories_count = Category.count
+    @categories = Category.pluck("name")
   end
 end
