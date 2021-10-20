@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
 
   has_secure_password
-  validates_uniqueness_of :email
-  validate :email, presence: true
-  validate :name, presence: true
+  validates :email, presence: true, uniqueness: { case_sensitive: false } 
+  validates :name, presence: true
   validate :password_and_confirmation
 
   def password_and_confirmation
